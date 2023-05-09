@@ -4,26 +4,32 @@
 // Created on: May 2023
 // This file contains the JS functions for index.html
 
-
 "use strict";
 
 /**
- * This function displays all numbers form 0 up to the user number
+ * This function displays all numbers between the user's mina nd max inclusive
  */
 function NumberDisplay() {
-  
-  //initialize the counter ot 0
-  let counter = 0
 
-  //initialize the numbers as an empty string
+  // initialize the numbers as an empty string
   let numbers = ""
     
-  //get the user number
-  let userNumber = parseInt(document.getElementById("user-number").value)
+  //get the user min
+  let userMin = parseInt(document.getElementById("user-min").value)
 
-  //use a a while loop to display the numbers from 0 up to the user number
-  while (counter <= userNumber) {
+  //get the user max
+  let userMax = parseInt(document.getElementById("user-max").value)
 
+  let counter = userMin
+
+  // if min is bigger than max
+  if (userMax < userMin) {
+    numbers = "Please make your min smaller than your max"
+  }
+
+  //use a while loop to display the numbers from 0 up to the user number
+  while (counter <= userMax) {
+    
     // build the string of numbers with a linebreak each time
     numbers = numbers + counter + "<br>"
 

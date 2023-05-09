@@ -44,14 +44,23 @@
       <br>
       <br>
       <img src="./images/lots_of_numbers.jpg" alt="numbers" height="230" width="300">
-      <h5>This program will display all numbers from 0 up to your number:</h5>
+      <h5>This program will display all numbers from the min to the max number:</h5>
 
-      <!-- Enter a number -->
+      <!-- Enter  your min -->
+      <h6>Enter your min:</h6>
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="user-min" step="1">
+          <label class="mdl-textfield__label" for="user-min">Enter your min...</label>
+          <span class="mdl-textfield__error">Enter an integer!</span>
+        </div>
+
+      <!-- Enter your max -->
       <h6>Enter an number:</h6>
       <form action="#">
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="user-number" step="1">
-          <label class="mdl-textfield__label" for="user-number">Enter a number...</label>
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="user-max" step="1">
+          <label class="mdl-textfield__label" for="user-max">Enter your max...</label>
           <span class="mdl-textfield__error">Enter a valid number!</span>
         </div>
       </form>
@@ -65,7 +74,8 @@
   		</button>
   		<p>
         <div id="result"></div>
-        <div id="user-number"></div>
+        <div id="user-min"></div>
+        <div id="user-max"></div>
   		</p>
     </main>
   </body>
